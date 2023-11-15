@@ -1,5 +1,8 @@
 @import "https://unpkg.com/open-props/easings.min.css";
 
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
+
+
 :root {
     /* spotify colors*/
     --spotify-green: #1ed760;
@@ -27,11 +30,22 @@ svg {
 
 /* global page styles */
 
-html {}
+html {
+    box-sizing: border-box;
+    color: var(--spotify-white);
+    font-family: 'Manrope', sans-serif;
+}
 
 /* center everything */
 
-body {}
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--spotify-black);
+    display: grid;
+    place-content: center;
+    margin: 0;
+}
 
 /*
     Object: Button reset
@@ -70,9 +84,90 @@ body {}
     Album
 */
 
+.album {
+    background-color: var(--spotify-darkGrey);
+    padding: 1.5rem;
+    border-radius: 1.2rem;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.album__img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.album__header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr auto;
+
+}
+
+.album__title {
+    grid-column-start: 1;
+
+}
+
+.album__artist {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    color: var(--spotify-grey);
+}
+
+.button-reset {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: span 3;
+}
+
+.album__action {
+    display: grid;
+}
+
+.toggle__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: var(--spotify-grey);
+    transition: opacity 0.3s var(--ease-in-out-2), transform 0.3s var(--ease-in-out-4);
+}
+
+.icon--add {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    fill: var(--spotify-green);
+}
+
+.icon--check {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    fill: var(--spotify-green);
+    /* display: none; */
+}
+
+
 /*
     Utitlities
 */
+
+.u-hidden {
+    display: none;
+}
+
+.u-opacity-0 {
+    opacity: 0;
+}
+
+.u-opacity-1 {
+    opacity: 1;
+}
+
+.u-rotate-180 {
+    transform: rotate(180deg);
+}
 
 .color-grey {
     color: var(--spotify-grey);
