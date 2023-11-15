@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Micro Interaction</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <article class="album">
+        <img class="album__img" src="assets/ab67616d0000b273ffd771a4236a4bfb7d0fd7c9.jpeg" alt="For That Beautiful Feeling">
+        <header class="album__header">
+            <h2 class="album__title">
+                Fountains
+            </h2>
+            <p class="album__artist">
+                The Chemical Brothers
+            </p>
+            <button title="Toggles light & dark" aria-label="auto" aria-live="polite" class="album__action button-reset toggle js-toggle">
+                <svg class="toggle__icon icon icon--add" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                    <circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="16" />
+                    <line x1="88" y1="128" x2="168" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                    <line x1="128" y1="88" x2="128" y2="168" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                </svg>
+                <svg class="toggle__icon icon icon--check" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                    <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z" />
+                </svg>
+            </button>
+        </header>
+    </article>
+</body>
+
+</html>
